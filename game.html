@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citadelle : Let's play</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styleHeader.css" rel="stylesheet">
+    <link href="css/mediaQueries.css" rel="stylesheet">
+    <link href="css/backgroundAnimation.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+     
+        <a href="index.html">
+            <p class="titleP" data-text="CITADELLE">CITADELLE</p>
+        </a>
+       
+    </header>
+
+    <main>
+        <div class="mainView">
+            <div class="player">
+                <div class="stock stockPlayer">Stock : 100</div>
+                <div class="shuttleHeartContainer">
+                    <div class="lifeBar">
+                        <img src="img/heartFull.png" alt="heart full" class="heart heartPlayer1">
+                        <img src="img/heartFull.png" alt="heart full" class="heart heartPlayer2">
+                        <img src="img/heartFull.png" alt="heart full" class="heart heartPlayer3">
+                    </div>
+                    <img src="img/spaceShuttle.png" alt="shuttle Player" class="shuttleGame shuttlePlayer">
+                </div>
+            </div>
+            <div class="bot">
+                <div class="shuttleHeartContainer botContainer">
+                    <img src="img/spaceShuttle.png" alt="shuttle Player" class="shuttleGame shuttleBot">
+                    <div class="lifeBar">
+                        <img src="img/heartFull.png" alt="heart full" class="heart heartBot1">
+                        <img src="img/heartFull.png" alt="heart full" class="heart heartBot2">
+                        <img src="img/heartFull.png" alt="heart full" class="heart heartBot3">
+                    </div>
+                </div>
+                <div class="stock stockBot">Stock : 100</div>
+            </div>
+        </div>
+        <div class="historicContainer">
+        </div>
+
+        <div class="playerInput">
+            <div class="inputGame">
+                <label for="missiles" class="labelInputGame">Entrer le nombre de missiles à envoyer :</label>
+                <input type="number" min="0" max="100" name="missiles" class="inputMissiles">
+            </div>
+            <button class="button fireButton animationButton">FEU !!!</button>
+        </div>
+    </main>
+
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <footer>
+        Citadelle 2021 ©
+    </footer>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>

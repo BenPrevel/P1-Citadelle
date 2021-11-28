@@ -1,0 +1,365 @@
+html,
+body {
+  height: 100%;
+  font-size: 2vh;
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.5;
+  background-size: cover;
+  color: white;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+nav, main {
+  flex-grow: 1;
+  text-align: center;
+}
+
+header,
+footer {
+  background: linear-gradient(black, #8bbbe9);
+  text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headerClickable{
+  width: 100vw;
+  height: 10%;
+}
+
+.shuttle{
+  width : 12%;
+  height: auto;
+}
+
+.left{
+  transform: rotate(180deg);
+}
+
+
+footer {
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* HOME PAGE -------------------------------*/
+.animationButton:hover {
+  animation: none;
+}
+
+.imgHome{
+  width: 100%;
+  height: 50%;
+  background: url("../img/shuttle.jpg");
+  background-size: cover;
+}
+
+.separator{
+  width: 100%;
+  position: relative;
+  top: -3.2vh;
+  z-index : 1;
+}
+
+.buttonContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+}
+
+
+.button{
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(black, #8bbbe9);
+  width:55%;
+  min-width: 200px;
+  font-size : 2vh;
+  padding: 1.3vh 0;
+  text-align : center;
+  border-radius: 30%;
+  color: white;
+  border-right: 5px solid white;
+  border-left: 5px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  box-shadow: 0px 10px 5px black; 
+  cursor: pointer;
+} 
+
+.buttonClick{
+  box-shadow: none;
+  transition: font-size 300ms, box-shadow 200s;
+}
+
+/* GAME PAGE  ----------------------------------*/
+.mainView{
+  width: 100%;
+  height: 35vh;
+}
+
+.player, .bot{
+  display: flex;
+  flex-direction: column;
+}
+
+.bot{
+  align-items: flex-end;
+}
+
+.stock{
+  min-width: 200px;
+  width: 40%;
+  margin : .5rem 0 1rem 0;
+  padding : .3rem;
+  background: linear-gradient(black, #8bbbe9);
+  border-bottom-right-radius: 20%;
+}
+
+.stockBot{
+  margin : 1vh 0 .5vh 0;
+  border-top-left-radius: 20%;
+}
+
+.shuttleHeartContainer{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.botContainer{
+  justify-content: flex-end;
+}
+
+.shuttleGame{
+  width : 10vh;
+  height: auto;
+  background: url('../img/space-shuttle.png');
+  background-size: cover;
+}
+
+.shuttlePlayer{
+  transform: rotate(25deg);
+  margin-left : 1vh;
+}
+
+.shuttleBot{
+  transform: rotate(-160deg);
+  margin-right : 1vh;
+}
+
+.lifeBar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 3vh;
+  margin : 0 1vh;
+}
+
+.heart{
+  box-sizing: border-box;
+}
+
+.historicContainer{
+  width: 40vh;
+  height: 23vh;
+  max-height: 25vh;
+  margin: 1rem auto;
+  padding : 1.5vh;
+  background: linear-gradient(black, #8bbbe9);
+  border: 5px solid darkslateblue;
+  overflow: scroll;
+  text-align: left;
+  font-size: 1.5vh;
+}
+
+.inputGame{
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(black, #8bbbe9);
+  margin-bottom: 1rem;
+}
+
+.labelInputGame{
+  padding : .3rem;
+  font-size: 1.5vh;
+}
+
+.inputMissiles{
+  min-width: 50px;
+  width:40%;
+  margin-right: .3rem;
+}
+
+.buttonDisable{
+  height: 35%;
+  background-color: grey;
+  color : darkgray;
+  border-color: darkgrey;
+}
+
+.fireButton{
+  height: 35%;
+}
+
+
+/* RULES PAGE --------------------------------------*/
+@keyframes glow {
+  from {
+    color: #fff;
+    text-shadow: 0 0 10px rgb( 19, 208, 102), 0 0 20px rgb( 19, 208, 102), 0 0 30px rgb( 19, 208, 102), 0 0 40px rgb( 19, 208, 102), 0 0 50px rgb( 19, 208, 102), 0 0 60px rgb( 19, 208, 102), 0 0 70px rgb( 19, 208, 102), 0 0 90px rgb( 19, 208, 102);
+  }
+  to {
+    color: gray;
+    text-shadow: 0 0 20px rgb( 19, 208, 102), 0 0 30px rgb( 19, 208, 102), 0 0 40px rgb( 19, 208, 102), 0 0 50px rgb( 19, 208, 102), 0 0 60px rgb( 19, 208, 102), 0 0 70px rgb( 19, 208, 102), 0 0 80px rgb( 19, 208, 102), 0 1 90px rgb( 19, 208, 102);
+  }
+}
+
+@keyframes titleUp {
+  from {
+    top : 37%;
+  }
+  to {
+    top : 0%;
+  }
+}
+
+@keyframes colorChange {
+  from {
+color: rgb(255, 255, 255, 0);
+  }
+  to {
+color: rgb(255, 255, 255, 1);
+  }
+}
+
+.titleRules{
+  position : relative;
+  font-size: 35px;
+  margin : 5%; 
+  animation: glow 2s ease-in-out infinite alternate, titleUp 2s ease-in-out 1s both; 
+}
+
+.rules{
+  text-align: left;
+  font-size: 2.3vh;
+  margin : 3vh;
+  padding: 1.5vh;
+  border : 2px solid white;
+  border-radius: 20px;
+  /* animation: colorChange 1s linear 2s both; */
+}
+
+ .curseur{ 
+  /* animation: colorChange 600ms ease-in-out infinite alternate; */
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited{
+  color: white;
+}
+
+.buttonRow{
+  margin-top: 5%;
+  text-align: center;
+}
+  
+
+/*CREDIT PAGE---------------------------------- */
+.creditsTitle {
+  display: flex;
+  justify-content: space-around;
+}
+
+.horizontalSlider {
+  display: block;
+  width: 100%;
+  height: 90%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+/*SCROLL BAR DESIGN*/
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 30px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: purple; 
+  border-radius: 10px;
+}
+
+.item {
+  width: 100%;
+  height: 90%;
+  display: inline-block;
+}
+
+.photoContainer{
+  width: auto;
+  height: 50%;
+}
+
+.margin{
+  margin-right : 2vh;
+  margin-left : 2vh;
+}
+
+.memberPhoto {
+  height: 100%;
+  box-sizing: content-box;
+}
+
+.memberContact {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  image-rendering: pixelated;
+}
+
+.memberName {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.description {
+  white-space: normal;
+  text-align: center;
+  padding : 1vh;
+  font-size: 1.3vh;
+}
+
+.victoryImg{
+  border-radius: 50%;
+  width: 40vh;
+}

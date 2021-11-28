@@ -1,0 +1,161 @@
+@media screen and (min-width: 500px){
+
+  /* HOME PAGE */
+.animationButton {
+    transition: 0.4s;
+}
+
+.animationButton:hover 
+{
+    background: rgb(115, 164, 139) url(../img/pixel3.png);
+    transition-delay: 0.5s;
+    animation: animate 0.5s steps(8) forwards;
+    background-size: 50%; 
+    box-shadow: 0 0 10px 0 rgb(115, 164, 139) inset, 0 0 10px 4px rgb(115, 164, 139);
+    width: 45vh;
+}
+
+
+@keyframes animate 
+{
+    0% { background-position-y: 0;}
+    100% {background-position-y: -480px;}
+}
+
+
+  .imgHome{
+      height: 100%;
+  }
+
+  .separator{
+      visibility: hidden;
+      margin-top : -50%;
+  }
+
+  .buttonContainer{
+    width: 40%;
+    height: 50%;
+    position: fixed;
+    top : 40%;
+  }
+
+  .button{
+    width: 40%;
+      padding-top : 2vh;
+  }
+
+  /* GAME PAGE*/
+  .mainView{
+    height: 40vh;
+    font-size : 1.3rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .player, .bot{
+    width: auto;
+    justify-content: center;
+  }
+
+  .stock{
+    max-width: 30vh;
+    position: fixed;
+    top : 15vh;
+    left : 0;
+  }
+
+  .stockBot{
+    left: auto;
+    right : 0;
+  }
+
+  .shuttleGame{
+    width : 15vh;
+  }
+
+  .shuttleHeartContainer{
+    margin-top : 7vh;
+  }
+
+  .botContainer{
+      margin-top : 18%;
+  }
+
+  .shuttlePlayer{
+      transform: none;
+  }
+    
+  .shuttleBot{
+      transform: rotate(-180deg);
+  }
+
+  .heart{
+    box-sizing: border-box;
+  }
+  
+  .lifeBar{
+    width: 5vh;
+  }
+
+  .historicContainer{
+    width: 40%;
+    height: 30%;
+    margin: 3rem auto;
+    float: right;
+  }
+
+  .playerInput{
+    margin-top : 3rem;
+  }
+
+  .inputGame{
+    padding : 1rem 3rem;
+  }
+  
+  .inputMissiles{
+    margin-left : 2rem;
+    width:20%;
+  }
+  
+  .fireButton{
+    padding-bottom: 2vh ;
+    width: 20%;
+  }
+
+  .shuttle{
+      width: 4.5%;
+      height: auto;
+  }
+
+/*RULES PAGE ------------------------------*/
+@keyframes titleUp {
+  from {
+    top : 33%;
+  }
+  to {
+    top : 0%;
+  }
+}
+
+.fight{
+  padding-bottom: 1.5vh ;
+  width: 15%;
+}
+
+
+/*CREDITS PAGE ------------------------------*/
+  .horizontalSlider {
+    display: flex;
+    overflow-x:auto;
+  }
+
+  .sliderContainer {
+    display: flex;
+  }
+
+  /*VICTORY DEFEAT-------------------------------------------------------------------------------------------------------------*/
+  .victoryContainer{
+    position: static;
+    margin: auto;
+  }
+}
